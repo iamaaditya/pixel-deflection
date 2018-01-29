@@ -2,6 +2,14 @@
 
 Code for paper: https://arxiv.org/abs/1801.08926
 
+Requirements:
+
+1. Keras 2.0+
+
+2. Scipy 1.0+
+
+(Older version of scipy wavelet transform does not have BayesShrink)
+
 ## Example
 
 ```
