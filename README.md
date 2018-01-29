@@ -1,6 +1,6 @@
 # Deflecting Adversarial Attacks with Pixel Deflection
 
-![deflecting pixels](https://arxiv-sanity-sanity-production.s3.amazonaws.com/render-output/41911/x3.png)
+![deflecting pixels](https://i.imgur.com/BhxmVwx.png)
 
 Code for paper: https://arxiv.org/abs/1801.08926  HTML version: https://www.arxiv-vanity.com/papers/1801.08926/
 
@@ -69,6 +69,15 @@ To generate map see this https://github.com/iamaaditya/image-compression-cnn/blo
   -window 
   -deflections 
 ```  
+
+### Impact of Pixel Deflection
+
+![pd](https://i.imgur.com/IlaYO9m.png) 
+
+### Localization of attacks
+
+![attacks](https://i.imgur.com/ydQ0a5e.png) 
+
 
 For any issues please contact aprakash@brandeis.edu
 
