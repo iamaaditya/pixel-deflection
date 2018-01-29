@@ -26,7 +26,10 @@ def classify_images(images, class_names, supress_print=False):
     images = preprocess_input(np.stack(images,axis=0))
     predictions = decode_predictions(model.predict(images),top=5)
     for p,true_class in zip(predictions,class_names):
-        if not supress_print: print('Predicted Class {}'.format([i[1:] for i in p]))
+        ans= []
+        for i in p:
+            ans.append(' {0}:{1:.2f} '.format(i[1],i[2]))
+        if not supress_print: print('Predicted Class {}'.format(','.join(ans)))
         total += 1
         r = [i[0] for i in p]
         top1 += int(true_class  == r[0])
@@ -52,7 +55,7 @@ def process_image_parallel(args):
         scores.append(classify_images(images, class_names, supress_print=True))
 
     t1,t5 = sum([i[0] for i in scores])/len(scores), sum([i[1] for i in scores])/len(scores)
-    print('After recovery Top 1 accuracy is {} and Top 5 accuracy is {}'.format(t1,t5))
+    print('After recovery Top 1 accuracy is {0:.2f} and Top 5 accuracy is {1:.2f}'.format(t1,t5))
 
 if __name__ == '__main__':
     args = get_arguments()

@@ -6,26 +6,18 @@ Code for paper: https://arxiv.org/abs/1801.08926
 
 ```
 » python main.py -image images/n02443114_00000055.png -map maps/n02443114_00000055.png     
-
 Image: images/n02443114_00000055.png, True Class: 'polecat'
-
 Before Defense ----------------
-
-Predicted Class [('black-footed_ferret', 0.976), ('weasel', 0.012), ('polecat', 0.008), ('hamster', 0.002), ('mink', 0.000)]
-
+Predicted Class  black-footed_ferret:0.98 , weasel:0.01 , polecat:0.01 , hamster:0.00 , mink:0.00
 After Defense -----------------
-
-Predicted Class [('polecat', 0.580), ('black-footed_ferret', 0.351), ('weasel', 0.020), ('hamster', 0.008), ('mink', 0.006)]
-
+Predicted Class  polecat:0.57 , black-footed_ferret:0.37 , weasel:0.02 , hamster:0.01 , mink:0.01
 ```
-
 ---------------------------------------------------------------------
-
 
 ```
 » python main.py -process_batch -directory ./images
 
-After recovery Top 1 accuracy is 66.6666666667 and Top 5 accuracy is 100.0
+After recovery Top 1 accuracy is 66.67 and Top 5 accuracy is 100.0
 
 ```
 
@@ -54,29 +46,17 @@ To generate map see this https://github.com/iamaaditya/image-compression-cnn/blo
 ```
 » python main.py --help
   -h, --help            show this help message and exit
-  
   -image
-  
   -map 
-  
   -directory
-  
   -process_batch
-
   -classifier 
-
     options: resnet50, inception_v3, vgg19, xception
-    
   -denoiser 
-
     options: wavelet, TVM, bilateral, deconv, NLM
-    
   -batch_size 
-  
   -sigma 
-  
   -window 
-  
   -deflections 
 ```  
 
