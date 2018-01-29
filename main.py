@@ -26,9 +26,7 @@ def classify_images(images, class_names, supress_print=False):
     images = preprocess_input(np.stack(images,axis=0))
     predictions = decode_predictions(model.predict(images),top=5)
     for p,true_class in zip(predictions,class_names):
-        ans= []
-        for i in p:
-            ans.append(' {0}:{1:.2f} '.format(i[1],i[2]))
+        ans= [' {0}:{1:.2f} '.format(i[1],i[2]) for i in p]
         if not supress_print: print('Predicted Class {}'.format(','.join(ans)))
         total += 1
         r = [i[0] for i in p]
