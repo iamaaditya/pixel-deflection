@@ -1,6 +1,8 @@
 # Deflecting Adversarial Attacks with Pixel Deflection
 
-Code for paper: https://arxiv.org/abs/1801.08926
+![deflecting pixels](https://arxiv-sanity-sanity-production.s3.amazonaws.com/render-output/41911/x3.png)
+
+Code for paper: https://arxiv.org/abs/1801.08926  HTML version: https://www.arxiv-vanity.com/papers/1801.08926/
 
 Requirements:
 
