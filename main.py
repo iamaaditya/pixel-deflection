@@ -12,7 +12,7 @@ def get_arguments():
     parser.add_argument('-image'            , type=str ,  default= 'images/n02443114_00000055.png')
     parser.add_argument('-map'              , type=str ,  default= 'maps/n02443114_00000055.png')
     parser.add_argument('-directory'        , type=str ,  default= './images/')
-    parser.add_argument('--process_batch'   , action='store_true')
+    parser.add_argument('-process_batch'   , action='store_true')
     parser.add_argument('-classifier'       , type=str ,  default= 'resnet50',    help='options: resnet50, inception_v3, vgg19, xception')
     parser.add_argument('-denoiser'         , type=str ,  default= 'wavelet',     help='options: wavelet, TVM, bilateral, deconv, NLM')
     parser.add_argument('-batch_size'       , type=int,   default= 64)
