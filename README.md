@@ -41,12 +41,25 @@ After recovery Top 1 accuracy is 66.67 and Top 5 accuracy is 100.0
 
 ### Batch usage
 
+```python
 » python main.py -process_batch --directory <directory_containing_images>
+```
+
 
 In batch usage the map file is expected to have same name as image file but inside './maps' directory
-
-
 To generate map see this https://github.com/iamaaditya/image-compression-cnn/blob/master/generate_map.py
+
+### Without map
+To use without a map, pass in '-disable_map' argument, e.g:
+
+```python
+» python main.py -disable_map -image images/n02443114_00000055.png
+Image: images/n02443114_00000055.png, True Class: 'polecat'
+Before Defense ----------------
+Predicted Class  black-footed_ferret:0.98 , weasel:0.01 , polecat:0.01 , hamster:0.00 , mink:0.00
+After Defense -----------------
+Predicted Class  polecat:0.55 , black-footed_ferret:0.36 , weasel:0.02 , hamster:0.01 , mink:0.01
+```
 
 
 ### Detailed usage
@@ -58,6 +71,7 @@ To generate map see this https://github.com/iamaaditya/image-compression-cnn/blo
   -map 
   -directory
   -process_batch
+  -disable_map
   -classifier 
     options: resnet50, inception_v3, vgg19, xception
   -denoiser 
@@ -70,3 +84,9 @@ To generate map see this https://github.com/iamaaditya/image-compression-cnn/blo
 
 For any issues please contact aprakash@brandeis.edu
 
+
+### Impact of Pixel Deflection & localization of attacks
+
+<center>
+![pd](https://raw.githubusercontent.com/iamaaditya/iamaaditya.github.io/master/images/image_combine.jpg) 
+</center>
