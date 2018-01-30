@@ -84,20 +84,11 @@ Predicted Class  polecat:0.55 , black-footed_ferret:0.36 , weasel:0.02 , hamster
   -deflections 
 ```  
 
-### Impact of Pixel Deflection
-
-![pd](https://i.imgur.com/IlaYO9m.png) 
-
-### Localization of attacks
-
-![attacks](https://i.imgur.com/ydQ0a5e.png) 
-
-
-For any issues please contact aprakash@brandeis.edu
-
-
 ### Impact of Pixel Deflection & localization of attacks
 
 <center>
-![pd](https://raw.githubusercontent.com/iamaaditya/iamaaditya.github.io/master/images/image_combine.jpg) 
+<img src="https://raw.githubusercontent.com/iamaaditya/iamaaditya.github.io/master/images/image_combine.jpg" /> 
 </center>
+
+
+For any issues please contact aprakash@brandeis.edu
