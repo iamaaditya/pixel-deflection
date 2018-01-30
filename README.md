@@ -1,6 +1,8 @@
 # Deflecting Adversarial Attacks with Pixel Deflection
 
-Code for paper: https://arxiv.org/abs/1801.08926
+![deflecting pixels](https://i.imgur.com/BhxmVwx.png)
+
+Code for paper: https://arxiv.org/abs/1801.08926  HTML version: https://www.arxiv-vanity.com/papers/1801.08926/
 
 Requirements:
 
@@ -81,6 +83,15 @@ Predicted Class  polecat:0.55 , black-footed_ferret:0.36 , weasel:0.02 , hamster
   -window 
   -deflections 
 ```  
+
+### Impact of Pixel Deflection
+
+![pd](https://i.imgur.com/IlaYO9m.png) 
+
+### Localization of attacks
+
+![attacks](https://i.imgur.com/ydQ0a5e.png) 
+
 
 For any issues please contact aprakash@brandeis.edu
 
