@@ -44,7 +44,7 @@ After recovery Top 1 accuracy is 66.67 and Top 5 accuracy is 100.0
 ### Batch usage
 
 ```python
-» python main.py -process_batch --directory <directory_containing_images>
+» python main.py -process_batch -directory <directory_containing_images>
 ```
 
 
