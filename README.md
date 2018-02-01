@@ -2,7 +2,9 @@
 
 ![deflecting pixels](https://i.imgur.com/BhxmVwx.png)
 
-Code for paper: https://arxiv.org/abs/1801.08926  HTML version: https://www.arxiv-vanity.com/papers/1801.08926/
+Code for paper: https://arxiv.org/abs/1801.08926 
+
+Blog with demo: https://iamaaditya.github.io/2018/02/demo-for-pixel-deflection/
 
 Requirements:
 
