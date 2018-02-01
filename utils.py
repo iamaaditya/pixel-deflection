@@ -29,6 +29,6 @@ def get_map(file):
     return norm(imread(file))
 
 def get_imagenet_labels():
-    imagenet = json.load(open('./imagenet_class_index.json'))
+    imagenet = json.load(open('./imagenet_labels.json'))
     return {i[0]:i[1] for i in imagenet.values()}
 
