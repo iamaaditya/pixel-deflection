@@ -31,7 +31,7 @@ def pixel_deflection(img, rcam_prob, deflections, window, sigma):
         for c in range(C):
             x,y = randint(0,H-1), randint(0,W-1)
 
-            if uniform(0,1) > rcam_prob[x,y]:
+            if uniform(0,1) < rcam_prob[x,y]:
                 continue
 
             while True: #this is to ensure that PD pixel lies inside the image

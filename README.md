@@ -14,13 +14,14 @@ Requirements:
 
 ## Example
 
-```
-» python main.py -image images/n02443114_00000055.png -map maps/n02443114_00000055.png     
-Image: images/n02443114_00000055.png, True Class: 'polecat'
-Before Defense ----------------
-Predicted Class  black-footed_ferret:0.98 , weasel:0.01 , polecat:0.01 , hamster:0.00 , mink:0.00
-After Defense -----------------
-Predicted Class  polecat:0.57 , black-footed_ferret:0.37 , weasel:0.02 , hamster:0.01 , mink:0.01
+
+```python
+» python main.py                                                                                                  02:24:51 on 2018-02-01
+Image: images/n02447366_00008562.png, True Class: 'badger'
+Before Defense :
+Predicted Class  skunk:0.59 , badger:0.15 , polecat:0.07 , wood_rabbit:0.02 , weasel:0.01
+After Defense :
+Predicted Class  badger:0.90 , skunk:0.08 , polecat:0.01 , weasel:0.00 , mink:0.00
 ```
 ---------------------------------------------------------------------
 
@@ -30,6 +31,8 @@ Predicted Class  polecat:0.57 , black-footed_ferret:0.37 , weasel:0.02 , hamster
 After recovery Top 1 accuracy is 66.67 and Top 5 accuracy is 100.0
 
 ```
+---------------------------------------------------------------------
+
 
 
 ## Usage
@@ -55,12 +58,12 @@ To generate map see this https://github.com/iamaaditya/image-compression-cnn/blo
 To use without a map, pass in '-disable_map' argument, e.g:
 
 ```python
-» python main.py -disable_map -image images/n02443114_00000055.png
-Image: images/n02443114_00000055.png, True Class: 'polecat'
-Before Defense ----------------
-Predicted Class  black-footed_ferret:0.98 , weasel:0.01 , polecat:0.01 , hamster:0.00 , mink:0.00
-After Defense -----------------
-Predicted Class  polecat:0.55 , black-footed_ferret:0.36 , weasel:0.02 , hamster:0.01 , mink:0.01
+» python main.py -disable_map                                                                                     02:26:02 on 2018-02-01
+Image: images/n02447366_00008562.png, True Class: 'badger'
+Before Defense :
+Predicted Class  skunk:0.59 , badger:0.15 , polecat:0.07 , wood_rabbit:0.02 , weasel:0.01
+After Defense :
+Predicted Class  badger:0.88 , skunk:0.11 , polecat:0.01 , weasel:0.00 , mink:0.00
 ```
 
 

@@ -9,8 +9,8 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # silences the TF INFO messages
 
 def get_arguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-image'            , type=str ,  default= 'images/n02443114_00000055.png')
-    parser.add_argument('-map'              , type=str ,  default= 'maps/n02443114_00000055.png')
+    parser.add_argument('-image'            , type=str ,  default= 'images/n02447366_00008562.png')
+    parser.add_argument('-map'              , type=str ,  default= 'maps/n02447366_00008562.png')
     parser.add_argument('-directory'        , type=str ,  default= './images/')
     parser.add_argument('-disable_map'      , action='store_true')
     parser.add_argument('-process_batch'    , action='store_true')
@@ -19,7 +19,7 @@ def get_arguments():
     parser.add_argument('-batch_size'       , type=int,   default= 64)
     parser.add_argument('-sigma'            , type=float, default= 0.04)
     parser.add_argument('-window'           , type=int,   default= 10)
-    parser.add_argument('-deflections'      , type=int,   default= 100)
+    parser.add_argument('-deflections'      , type=int,   default= 200)
     return parser.parse_args()
 
 def classify_images(images, class_names, supress_print=False):
@@ -41,7 +41,7 @@ def process_image(args, image_name, defend=True):
     if not args.disable_map:
         map   = get_map('./maps/'+image_name.split('/')[-1])
     else:
-        map   = np.ones((image.shape[0],image.shape[1]))
+        map   = np.zeros((image.shape[0],image.shape[1]))
 
     if defend:
         img = pixel_deflection(image, map, args.deflections, args.window, args.sigma)
@@ -83,9 +83,9 @@ if __name__ == '__main__':
     else:
         class_name = args.image.split('/')[-1].split('_')[0]
         print("Image: {}, True Class: '{}'".format(args.image, imagenet_labels[class_name]))
-        print('Before Defense ----------------')
+        print('Before Defense :')
         image = process_image(args, args.image, defend=False)
         classify_images([image], [class_name])
-        print('After Defense -----------------')
+        print('After Defense :')
         image = process_image(args, args.image, defend=True)
         classify_images([image], [class_name])
