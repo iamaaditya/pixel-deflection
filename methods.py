@@ -27,9 +27,10 @@ def denoiser(denoiser_name, img,sigma):
 
 def pixel_deflection(img, rcam_prob, deflections, window, sigma):
     H, W, C = img.shape
-    for j in range(deflections):
+    while deflections > 0:
         for c in range(C):
             x,y = randint(0,H-1), randint(0,W-1)
+
             if uniform(0,1) > rcam_prob[x,y]:
                 continue
 
@@ -37,4 +38,5 @@ def pixel_deflection(img, rcam_prob, deflections, window, sigma):
                 a,b = randint(-1*window,window), randint(-1*window,window)
                 if x+a < H and x+a > 0 and y+b < W and y+b > 0: break
             img[x,y,c] = img[x+a,y+b,c] 
+            deflections -= 1
     return img
