@@ -9,6 +9,7 @@ Blog with demo: https://iamaaditya.github.io/2018/02/demo-for-pixel-deflection/
 Requirements:
 
 1. Keras 2.0+
+(only used for classification - Pixel Deflection itself is deep learning platform independent) 
 
 2. Scipy 1.0+
 
